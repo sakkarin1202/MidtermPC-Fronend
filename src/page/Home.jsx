@@ -1,5 +1,5 @@
 import React from "react";
-import Laptop from "../assets/images/laptop.png";
+// import Laptop from "../assets/images/laptop.png";
 import PC from "../assets/images/PC.png";
 import Mobile from "../assets/images/Mobile.png";
 import Tablet from "../assets/images/Tablet.png";
@@ -16,7 +16,7 @@ const data = [
   {
     id: 2,
     title: "Laptop",
-    img: Laptop,
+    // img: Laptop,
     description: "Lightweight laptop for work and leisure with long battery life.",
     rating: 4, 
   },
