@@ -70,7 +70,7 @@ const Product = () => {
   const [selectedType, setSelectedType] = useState("All");
 
   const fetchData = async () => {
-    const res = await axios.get("http://localhost:5000/api/v1/products");
+    const res = await axios.get("https://midtermpc-backend.onrender.com/api/v1/products");
     const product = res.data;
     setData(product);
     if (product.length > 0) {
@@ -101,7 +101,7 @@ const Product = () => {
   const onFinish = async (values) => {
     try {
       const resAddProduct = await axios.post(
-        "http://localhost:5000/api/v1/products/",
+        "https://midtermpc-backend.onrender.com/api/v1/products/",
         values
       );
       if (resAddProduct.status === 201) {
@@ -126,7 +126,7 @@ const Product = () => {
   const onFinishUpdate = async (values) => {
     try {
       const resEditProduct = await axios.put(
-        `http://localhost:5000/api/v1/products/${productId}`,
+        `https://midtermpc-backend.onrender.com/api/v1/products/${productId}`,
         values
       );
       if (resEditProduct.status === 200) {
@@ -151,7 +151,7 @@ const Product = () => {
   const onFinishDelete = async () => {
     try {
       const resDeleteProduct = await axios.delete(
-        `http://localhost:5000/api/v1/products/${productId}`
+        `https://midtermpc-backend.onrender.com/api/v1/products/${productId}`
       );
       if (resDeleteProduct.status === 200) {
         Swal.fire({
